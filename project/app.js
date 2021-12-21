@@ -107,7 +107,6 @@ async function handleListClick(event) {
     selectedId,
     'confirmed',
   );
-  console.log(confirmedResponse);
   endLoadingAnimation();
   setDeathsList(deathResponse);
   setTotalDeathsByCountry(deathResponse);
@@ -115,7 +114,6 @@ async function handleListClick(event) {
   setTotalRecoveredByCountry(recoveredResponse);
   setChartData(confirmedResponse);
   isDeathLoading = false;
-  // console.log(data);
 }
 
 /**
@@ -191,33 +189,20 @@ function endLoadingAnimation() {
   recoveredList.removeChild(recoveredSpinner);
 }
 
-//
 async function setupData() {
   const { data } = await fetchCovidSummary();
-  console.log(data);
   setTotalConfirmedNumber(data);
   setTotalDeathsByWorld(data);
   setTotalRecoveredByWorld(data);
   setCountryRanksByConfirmedCases(data);
   setLastUpdatedTimestamp(data);
-  // renderChart();
 }
 
 function renderChart(data, labels) {
   var ctx = $('#lineChart').getContext('2d');
-  const defaultLabel = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-  ];
-  const defaultData = [0, 10, 5, 2, 20, 30, 45];
-  Chart.defaults.global.defaultFontColor = '#f5eaea';
-  Chart.defaults.global.defaultFontFamily = 'Exo 2';
-  var chart = new Chart(ctx, {
+  Chart.defaults.color = '#f5eaea';
+  Chart.defaults.font.family = 'Exo 2';
+  new Chart(ctx, {
     type: 'line',
     data: {
       labels,
