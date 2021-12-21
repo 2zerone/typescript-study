@@ -10,8 +10,6 @@ var address = document.querySelector('#address');
 var user = {};
 
 // test
-// test2
-// test3
 
 function startApp() {
   axios
