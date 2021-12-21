@@ -4,3 +4,4 @@ function add(a: number, b: number): number {
 }
 
 var result = add(10, 20);
+result.toLocaleString();
