@@ -39,10 +39,12 @@ const arr: StringArray = ['a', 'b', 'c'];
 
 // 딕셔너리 패턴
 interface StringRegexDictionary {
-    [key: string]
+    [key: string]: RegExp;
 }
 
-var obj = {
-    sth: /abc/,
+var obj: StringRegexDictionary = {
+    // sth: /abc/,
+    cssFile: /\.css$/, // 모든 css 확장자로 끝나는 파일들을 불러오는 정규식
+    jsFile: /\.js$/, // 모든 js 확장자로 끝나는 파일들을 불러오는 정규식
 }
 
