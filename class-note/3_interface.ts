@@ -13,12 +13,12 @@ var seho: User = {
 function getUser(user: User) {
     console.log(user);
 }
+
 const capt = {
     name: '캡틴',
     age: 100
 }
 getUser(capt);
-
 // 함수의 스펙(구조)에 인터페이스 활용
 interface SumFunction {
     (a: number, b: number): number;
@@ -48,3 +48,10 @@ var obj: StringRegexDictionary = {
     jsFile: /\.js$/, // 모든 js 확장자로 끝나는 파일들을 불러오는 정규식
 }
 
+Object.keys(obj).forEach(function(value) {});
+
+// 인터페이스 확장
+interface Person {
+    name: string;
+    age: number;
+}
