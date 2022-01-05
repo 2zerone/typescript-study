@@ -1,12 +1,12 @@
-// interface Person {
-//     name: string;
-//     age: number;
-// }
-
-type Person = {
+interface Person {
     name: string;
     age: number;
 }
+
+// type Person = {
+//     name: string;
+//     age: number;
+// }
 
 var younghan: Person = {
     name: '영한',
