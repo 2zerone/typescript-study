@@ -31,17 +31,22 @@ interface Person {
     age: number;
 }
 
-function askSomeone(someone: Developer | Person) {
-    someone.name
-    someone.skill
-    someone.age
-}
+// function askSomeone(someone: Developer | Person) {
+// //     someone.name
+// //     someone.skill
+// //     someone.age
+// }
+
+// askSomeone({ name: '디벨로퍼', skill: '웹 개발' });
+// askSomeone({ name: '캡틴', age: 100 })
 
 function askSomeone(someone: Developer & Person) {
     someone.name
     someone.skill
     someone.age
 }
+
+askSomeone({ name: '디벨로퍼', skill: '웹 개발', age: 27 })
 
 
 // var seho: string | number | boolean;
