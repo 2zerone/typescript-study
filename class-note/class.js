@@ -10,3 +10,5 @@ class Person {
 
 var seho = new Person('세호', 30);
 console.log(seho);
+
+var capt = new Person(30, 30);
