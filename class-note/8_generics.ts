@@ -7,9 +7,19 @@
 // logText('하이'); // 문자열 하이
 // logText(true); // 진위값 true
 
-function logText<T>(text: T): T {
+// function logText<T>(text: T): T {
+//     console.log(text);
+//     return text;
+// }
+
+// logText<string>('하이');
+
+function logText(text: string) {
     console.log(text);
+    text.split('').reverse().join('');
     return text;
 }
 
-logTtext
+logText('a');
+logText(10);
+logText(true);
