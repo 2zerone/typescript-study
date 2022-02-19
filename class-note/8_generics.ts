@@ -20,6 +20,13 @@ function logText(text: string) {
     return text;
 }
 
+function logNumber(num: number) {
+    console.log(num);
+    return num;
+}
+
 logText('a');
 logText(10);
+
+const num = logNumber(10);
 logText(true);
